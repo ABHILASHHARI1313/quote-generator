@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background: url("static/bg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .quote-container {
+            background-color : rgba(255, 255, 255, 0.5); 
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration:solid;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+          }
+          
+          .button:hover {background-color: #3e8e41}
+          
+          .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+          }
+        blockquote {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        blockquote p:last-child {
+            font-style: italic;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="quote">
+        <div class="quote-container">
+            <blockquote>
+                <p>{{quote}}</p>
+                <p>{{author}}</p>
+                <a href=""><button class="button">Regenerate</button></a>
+            </blockquote>
+        </div>
+    </div>
+</body>
+</html>
