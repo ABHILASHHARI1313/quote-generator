@@ -8,11 +8,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-image: url("{% static 'back.jpg' %}");
+            background-repeat : no-repeat;
+            background-size : cover;
             display: flex;
-            background: url("{% static 'back.jpg' %}");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -63,7 +62,6 @@
 <body>
     <div class="quote">
         <div class="quote-container">
-            <img src="{% static 'back.jpg' %}" alt="">
             <blockquote>
                 <p>{{quote}}</p>
                 <p>{{author}}</p>
