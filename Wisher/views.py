@@ -3,6 +3,7 @@ import requests,json
 
 def page(request):
     category = "happiness"
+    category = "happiness"
     api_url = 'https://api.api-ninjas.com/v1/quotes?category={}'.format(category)
     response = requests.get(api_url, headers={'X-Api-Key': 'Vp71qvPyFEpWhQXVFTWQCg==MTaAUVNU6tFV0V9m'})
     jsondata = json.loads(response.text)
